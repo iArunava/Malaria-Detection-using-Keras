@@ -1,3 +1,6 @@
+*.zip
+cell_images/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
