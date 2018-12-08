@@ -12,9 +12,8 @@ def list_images_from_path(path):
 
     for file in listdir(path):
         if os.path.isfile(path + file):
-            files.append(file)
+            files.append(path + file)
         else:
-            print (path + file)
             files += list_images_from_path(path + file)
 
     return files

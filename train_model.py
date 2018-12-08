@@ -1,5 +1,6 @@
 import argparse
-from keras.preprocessing import ImageDataGenerator
+from keras.preprocessing.image import ImageDataGenerator
+from dataset import create_datasets
 from ResNet50 import ResNet50
 from test_model import *
 from config import *
@@ -11,7 +12,9 @@ def lr_decay(epoch):
     return alpha
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser('-t', '--train',
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('-t', '--train',
         type=bool,
         default=False,
         help='To train or test')
@@ -21,11 +24,14 @@ if __name__ == '__main__':
         default='./models/trained_malaria_model.hdf5',
         help='The path where the model is stored.')
 
-    FLAGS, unparsed = parser.parse_args()
+    FLAGS, unparsed = parser.parse_known_args()
 
     if not FLAGS.train:
         test_model(FLAGS.graph_path)
-        return
+        exit(0)
+
+    # Create all datasets
+    create_datasets()
 
     # Initialize the ImageDataGenerator
     train_aug = ImageDataGenerator(
