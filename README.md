@@ -44,6 +44,13 @@ python3 train_model.py --help
 
 ![dl_medical_imaging_malaria_dataset](https://user-images.githubusercontent.com/26242097/50046086-713da980-00c3-11e9-9c79-db215df220e2.jpg)
 
+## References
+
+1. [PyImageSearch - Deep Learning and Medical Image Analysis with Keras](https://www.pyimagesearch.com/2018/12/03/deep-learning-and-medical-image-analysis-with-keras/)
+2. [Pre-trained convolutional neural networks as feature extractors toward improved parasite detection in thin blood smear images.](https://lhncbc.nlm.nih.gov/system/files/pub9752.pdf)
+3. [NIH - Malaria Dataset](https://ceb.nlm.nih.gov/repositories/malaria-datasets/)
+4. [Carlos Atico Azira’s excellent write up](https://blog.insightdatascience.com/https-blog-insightdatascience-com-malaria-hero-a47d3d5fc4bb)
+
 ## LICENSE
 
 The code in this repository is distributed under the MIT License. <br/>
