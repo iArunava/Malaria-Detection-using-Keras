@@ -19,7 +19,7 @@ body {
     font-size: 30px;
     margin-top: 1em;
     margin-bottom: 1em;
-    color: #262626;
+    color: #1E88E5;
 }
 
 .content {
@@ -46,17 +46,17 @@ button.choose-file-button {
   height: 40px;
   border-radius: 2px;
   background-color: #ffffff;
-  border: solid 1px #7052CB;
+  border: solid 1px #1E88E5;
   font-size: 13px;
-  color: #7052CB;
+  color: #1E88E5;
 }
 
 button.analyze-button {
     width: 200px;
     height: 40px;
-    border: solid 1px #7052CB;
+    border: solid 1px #1E88E5;
     border-radius: 2px;
-    background-color: #7052CB;
+    background-color: #1E88E5;
     font-size: 13px;
     color: #ffffff;
 }
