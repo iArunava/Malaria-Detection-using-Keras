@@ -1,4 +1,5 @@
 import argparse
+import os
 from keras.preprocessing.image import ImageDataGenerator
 from dataset import create_datasets
 from ResNet50 import ResNet50
@@ -24,14 +25,31 @@ if __name__ == '__main__':
         default='./models/trained_malaria_model.hdf5',
         help='The path where the model is stored.')
 
+    parser.add_argument('-otb', '--on-test-batch',
+        type=bool,
+        default=False,
+        help='Perform inference on the whole test set')
+
+    parser.add_argument('-i', '--image',
+        type=str,
+        default=None,
+        help='To the image file')
+
     FLAGS, unparsed = parser.parse_known_args()
 
-    if not FLAGS.train:
-        test_model(FLAGS.graph_path)
-        exit(0)
-
     # Create all datasets
-    create_datasets()
+    if not os.path.exists(TRAIN_PATH) or not os.path.exists(VAL_PATH) or \
+       not os.path.exists(TEST_PATH):
+        create_datasets()
+
+    if not FLAGS.train:
+        if FLAGS.image == None and FLAGS.on_test_batch == False:
+            raise Exception('Path to image file is not provided!')
+        elif FLAGS.on_test_batch:
+            test_model(FLAGS.graph_path, FLAGS.on_test_batch)
+        else:
+            test_model(FLAGS.graph_path, FLAGS.on_test_batch, FLAGS.image)
+        exit(0)
 
     # Initialize the ImageDataGenerator
     train_aug = ImageDataGenerator(

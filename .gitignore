@@ -4,6 +4,7 @@
 
 cell_images/
 cimages_*
+zeit/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
