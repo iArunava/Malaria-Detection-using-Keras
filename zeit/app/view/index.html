@@ -1,0 +1,85 @@
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <link rel='stylesheet' href='../static/style.css'>
+        <link rel='stylesheet' href='../static/dependencies/bulma.min.css'>
+        <script src='../static/client.js'></script>
+    </head>
+
+    <body>
+        <nav class="navbar is-transparent">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+                <p class="class--title"> Blemger </p>
+            </a>
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div id="navbarExampleTransparentExample" class="navbar-menu">
+
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="#">
+                        Options
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                      <p class="control">
+                        <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" href="https://twitter.com/intent/tweet?text=Check out this fun and interactive site that blends images &amp;hashtags=blemger&amp;url=https://iarunava.github.io/Blemger/&amp;via=iArunavaOficial">
+                          <span class="icon">
+                            <i class="fab fa-twitter"></i>
+                          </span>
+                          <span>
+                            Tweet
+                          </span>
+                        </a>
+                      </p>
+                      <p class="control">
+                        <a class="button is-primary" href="https://github.com/iArunava/Blemger/">
+                          <span class="icon">
+                            <i class="fab fa-github"></i>
+                          </span>
+                          <span> Check out the Repository </span>
+                        </a>
+                      </p>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div>
+            <div class='center'>
+                <div class='title'> Malaria Model </div>
+                <div class=''> Check out the Github
+                <div class='content'>
+                    <div class='no-display'>
+                        <input id='file-input'
+                            class='no-display'
+                            type='file'
+                            name='file'
+                            accept='image/*'
+                            onchange='showPicked(this)'>
+                    </div>
+                    <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+                    <div class='upload-label'>
+                        <label id='upload-label'>No file chosen</label>
+                    </div>
+                    <div>
+                        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+                    </div>
+                    <div class='analyze'>
+                        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+                    </div>
+                    <div class='result-label'>
+                        <label id='result-label'></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
