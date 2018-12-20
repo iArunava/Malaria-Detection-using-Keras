@@ -3,6 +3,7 @@
 *.hdf5
 *.pb
 
+zeit/
 cell_images/
 cimages_*
 
