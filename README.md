@@ -48,6 +48,10 @@ The live link to the deployed model can be found here: https://malaria-classifie
 
 The code that is used to deploy the model is open sourced and can be found [here](https://github.com/iArunava/Malaria-Detection-using-Keras/tree/master/zeit)
 
+## A look into the deployed model on web
+
+![malaria model - deployed classifier](https://user-images.githubusercontent.com/26242097/50305612-5d29eb80-04b9-11e9-9feb-7c0eb58483c6.png)
+
 ## How to deploy your own models using this?
 
 0. Download `node`, `now`, `now-cli`
