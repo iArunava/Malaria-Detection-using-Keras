@@ -1,6 +1,7 @@
 *.zip
 *.h5
 *.hdf5
+*.pb
 
 cell_images/
 cimages_*
