@@ -40,6 +40,48 @@ python3 train_model.py --help
 
 7.**Enjoy!!**
 
+## Production
+
+The model is deployed to production and you can use the model to test on your own images!!<br/>
+The model is deployed using [Zeit](https://zeit.co/). Quite an amazing platform!<br/>
+The live link to the deployed model can be found here: malaria.classifier.now.sh <br/>
+
+The code that is used to deploy the model is open sourced and can be found [here](https://github.com/iArunava/Malaria-Detection-using-Keras/tree/master/zeit)
+
+## How to deploy your own models using this?
+
+0. Download `node`, `now`, `now-cli`
+```
+sudo apt install npm
+sudo npm install -g now
+```
+
+1. Get a **direct download** link to your model
+
+2. Set that link equal to `model_file_url` - which you can find here on [app/server.py/L20](https://github.com/iArunava/Malaria-Detection-using-Keras/blob/master/zeit/app/server.py#L20)
+
+3. Run
+```
+now
+```
+
+4. **The site should be deployed now!!**
+
+5. Use a custom name for your site
+```
+export NAME='custom-site-name'
+now alias $NAME
+```
+your site is now *also* accessible at custom-site-name.now.sh
+
+6. Keeping the deployment alive (as it goes to sleep after some time of inactivity)
+```
+now scale custom-site-name.now.sh sfo 1
+```
+
+7. Share the link with everyone and Enjoy!!
+
+
 ## A few examples to visualize
 
 ![dl_medical_imaging_malaria_dataset](https://user-images.githubusercontent.com/26242097/50046086-713da980-00c3-11e9-9c79-db215df220e2.jpg)
@@ -50,6 +92,7 @@ python3 train_model.py --help
 2. [Pre-trained convolutional neural networks as feature extractors toward improved parasite detection in thin blood smear images.](https://lhncbc.nlm.nih.gov/system/files/pub9752.pdf)
 3. [NIH - Malaria Dataset](https://ceb.nlm.nih.gov/repositories/malaria-datasets/)
 4. [Carlos Atico Azira’s excellent write up](https://blog.insightdatascience.com/https-blog-insightdatascience-com-malaria-hero-a47d3d5fc4bb)
+5. [Zeit Production from fast.ai](https://github.com/fastai/course-v3/tree/master/docs/production)
 
 ## LICENSE
 
