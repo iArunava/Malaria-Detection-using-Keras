@@ -44,7 +44,7 @@ python3 train_model.py --help
 
 The model is deployed to production and you can use the model to test on your own images!!<br/>
 The model is deployed using [Zeit](https://zeit.co/). Quite an amazing platform!<br/>
-The live link to the deployed model can be found here: malaria.classifier.now.sh <br/>
+The live link to the deployed model can be found here: https://malaria.classifier.now.sh <br/>
 
 The code that is used to deploy the model is open sourced and can be found [here](https://github.com/iArunava/Malaria-Detection-using-Keras/tree/master/zeit)
 
@@ -72,7 +72,7 @@ now
 export NAME='custom-site-name'
 now alias $NAME
 ```
-your site is now *also* accessible at custom-site-name.now.sh
+your site is now *also* accessible at **custom-site-name.now.sh**
 
 6. Keeping the deployment alive (as it goes to sleep after some time of inactivity)
 ```
